@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CulculinaryRecipesConfig(AppConfig):
+class CulinaryRecipesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'culculinary_recipes'
+    name = 'culinary_recipes'
