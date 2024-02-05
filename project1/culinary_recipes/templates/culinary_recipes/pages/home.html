@@ -1,15 +1,29 @@
+<!DOCTYPE html>
+
 {% include "culinary_recipes\partials\head.html" %}
 
 <body>
-    <header class="main-header-container">
-        <div class="main-header container">
-            <h1>
-                <a class="main-logo" href="/culinary-recipes/home">
-                    <i class="fas fa-utensils main-logo-icon"></i>
-                    <span class="main-logo-text">Culinary Recipes</span>
-                </a>
-            </h1>
+    {% include "culinary_recipes\partials\header.html" %}
+    {% include "culinary_recipes\partials\search.hmtl" %}
+
+    <main class="main-content-container">
+        <div class="=main-content main-content-list container">
+
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+            {% include "culinary_recipes\partials\recipe_list.html" %}
+
+
         </div>
-    </header>
+    </main>
+
+    {% include "culinary_recipes\partials\footer.html" %}
+
 </body>
+
 </html>
