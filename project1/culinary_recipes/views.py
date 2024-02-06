@@ -8,4 +8,4 @@ def home(request):
 
 
 def recipe(request, id):
-    return render(request, 'culinary_recipes/pages/home.html')
+    return render(request, 'culinary_recipes/pages/recipe_card.html')
