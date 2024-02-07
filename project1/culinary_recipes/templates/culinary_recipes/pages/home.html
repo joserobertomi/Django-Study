@@ -5,14 +5,9 @@
 {% block content %}
 <div class="=main-content main-content-list container">
 
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-    {% include "culinary_recipes\partials\recipe_list.html" %}
-
+    {% for recipe in recipes %}
+        {% include "culinary_recipes\partials\recipe_list.html" %}
+    {% endfor %}
+    
 </div>
 {% endblock content %}
