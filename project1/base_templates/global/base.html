@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+
+{% include "culinary_recipes\partials\head.html" %}
+
+<body>
+    {% include "culinary_recipes\partials\header.html" %}
+    {% include "culinary_recipes\partials\search.hmtl" %}
+
+    <main class="main-content-container">
+    {% block content %}{% endblock content %}
+    </main>
+
+    {% include "culinary_recipes\partials\footer.html" %}
+
+</body>
+
+</html>

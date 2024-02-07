@@ -1,21 +1,11 @@
-<!DOCTYPE html>
+{% extends "global\base.html" %}
 
-{% include "culinary_recipes\partials\head.html" %}
 
-<body>
-    {% include "culinary_recipes\partials\header.html" %}
-    {% include "culinary_recipes\partials\search.hmtl" %}
+{% block content %}
 
-    <main class="main-content-container">
-        <div class="main-content main-content-detail container">
+<div class="main-content main-content-detail container">
 
-            {% include "culinary_recipes\partials\recipe_list.html" %}
+    {% include "culinary_recipes\partials\recipe_list.html" %}
 
-        </div>
-    </main>
-
-    {% include "culinary_recipes\partials\footer.html" %}
-
-</body>
-
-</html>
+</div>
+{% endblock content %}
