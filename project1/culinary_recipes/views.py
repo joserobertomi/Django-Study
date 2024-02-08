@@ -8,4 +8,4 @@ def home(request):
 
 
 def recipe(request, id):
-    return render(request, 'culinary_recipes/pages/recipe_card.html', context={'recipe': make_recipe()})
+    return render(request, 'culinary_recipes/pages/recipe_card.html', context={'recipe': make_recipe(), 'is_detail_page': True})
