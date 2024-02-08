@@ -1,9 +1,13 @@
 <div class=" recipe recipe-list-item">
     <div class="recipe-cover">
-        <img src="{{ recipe.cover.url }}" alt="Temporary">
+        <a href="{% url "culinary_recipes:card" recipe.id %}">
+            <img src="{{ recipe.cover.url }}" alt="Temporary">    
+        </a>
     </div>
     <div class="recipe-title-container">
-        <h2 class="recipe-title">{{ recipe.title }}</h2>
+        <a href="{% url "culinary_recipes:card" recipe.id %}">
+            <h2 class="recipe-title">{{ recipe.title }}</h2>
+        </a>
     </div>
 
     <div class="recipe-author">
@@ -44,7 +48,7 @@
 
     {% if is_detail_page is not True %}
         <footer class="recipe-footer">
-            <a class="recipe-read-more button button-dark button-full-width" href="/culinary-recipes/recipe/123/">
+            <a class="recipe-read-more button button-dark button-full-width" href="{% url "culinary_recipes:card" recipe.id %}">
                 <i class="fas fa-eye"></i>
                 <span>see more...</span>
             </a>
