@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from utils.culinary_recipes.factorys import make_recipe
 from culinary_recipes.models import Recipe
-from django.http import Http404
 
 # Create your views here.
 
@@ -12,14 +11,11 @@ def home(request):
 
 
 def category(request, category_id):
-    recipes = Recipe.objects.filter(category__id=category_id, is_published=True).order_by('-id')
-
-    if not recipes:
-        raise Http404("Page Not Found 😢")
+    recipes = get_list_or_404(Recipe.objects.filter(category__id=category_id, is_published=True).order_by('-id'))
 
     return render(request, 'culinary_recipes/pages/categorys.html', context={
         'recipes': recipes,
-        'category_title': f'{recipes.first().category.name}'
+        'category_title': f'{recipes[0].category.name}'
     })
 
 
