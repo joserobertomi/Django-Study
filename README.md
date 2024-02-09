@@ -11,6 +11,12 @@ This repository serves as a centralized hub for documenting and showcasing my ha
 - **Instructor:** Otavio Miranda
 - **Platform:** Udemy
 
+## My Notes in Notion
+
+I maintain detailed notes about my Django studies on Notion. You can find them [here](https://ossified-spade-390.notion.site/Django-Web-Framework-e-Rest-Framework-notes-14c127bcbdc6473aaffca060a2f8ee02).
+
+Feel free to explore and refer to these notes for more in-depth information on specific topics. Your feedback and suggestions on the notes are highly appreciated!
+
 ## Future Updates
 
 As I progress further in my Django studies, I plan to enrich this README with additional details about the specific topics covered, challenges faced, and insights gained. Stay tuned for a more comprehensive overview of my learning journey!
