@@ -7,6 +7,10 @@
 
     {% for recipe in recipes %}
         {% include "culinary_recipes\partials\recipe_list.html" %}
+    {% empty %}
+        <div class="center m-y">
+            <h1>There in no Culinary Recipes found here 😢</h1>
+        </div>
     {% endfor %}
     
 </div>
