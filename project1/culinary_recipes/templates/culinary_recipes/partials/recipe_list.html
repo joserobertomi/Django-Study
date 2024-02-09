@@ -11,26 +11,29 @@
     </div>
 
     <div class="recipe-author">
-        <span class="recipe-author-item">
-        
-            {% if recipe.author.first_name or recipe.author.last_name %}
-                <i class="fas fa-user"></i>
-                {{ recipe.author.first_name }} {{ recipe.author.last_name }}    
-            {% else %}
-                <i class="fas fa-user"></i>
-                {{ recipe.author.username }}
-            {% endif %}
-        </span>
+        {% if recipe.author is not None %}
+            <span class="recipe-author-item">
+                {% if recipe.author.first_name or recipe.author.last_name %}
+                    <i class="fas fa-user"></i>
+                    {{ recipe.author.first_name }} {{ recipe.author.last_name }}    
+                {% else %}
+                    <i class="fas fa-user"></i>
+                    {{ recipe.author.username }}
+                {% endif %}
+            </span>
+        {% endif %}
         <span class="recipe-author-item">
             <i class="fas fa-calendar-alt"></i>
             {{ recipe.created_at }}
         </span>
+        {% if recipe.category is not None %}
         <span class="recipe-author-item">
             <a href="{% url "culinary_recipes:category" recipe.category.id %}">
                 <i class="fas fa-layer-group"></i>
                 <span>{{ recipe.category.name }}</span>
             </a>
         </span>
+        {% endif %}
     </div>
 
     <div class="recipe-content">
